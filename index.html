@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For Hamza ❤️</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #fbd3e9, #bb377d);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      color: #333;
+    }
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 25px;
+      width: 90%;
+      max-width: 400px;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+    }
+    .card:hover { transform: scale(1.05); }
+    button {
+      margin-top: 20px;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 30px;
+      background: #ff6f91;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover { background: #ff3f6d; }
+  </style>
+</head>
+<body>
+
+<div class="card" id="box">
+  <h2>Hey Hamza ❤️</h2>
+  <p>Someone made this special just for you…</p>
+  <button onclick="next()">Click Me 💌</button>
+</div>
+
+<script>
+  let step = 0;
+  function next() {
+    const box = document.getElementById("box");
+    if (step === 0) {
+      box.innerHTML = `
+        <h2>Just Saying 😌</h2>
+        <p>Hamza, you make every day brighter with your smile ✨</p>
+        <button onclick="next()">Next 💕</button>
+      `;
+    } else if (step === 1) {
+      box.innerHTML = `
+        <h2>Little Fun 😄</h2>
+        <p>Sometimes I think… you might secretly be a superhero 🦸‍♂️</p>
+        <button onclick="next()">One More 👀</button>
+      `;
+    } else if (step === 2) {
+      box.innerHTML = `
+        <h2>Deep Feelings 🥺</h2>
+        <p>No one understands me like you do… you’re truly special Hamza ❤️</p>
+        <button onclick="next()">Last Surprise 🎁</button>
+      `;
+    } else {
+      box.innerHTML = `
+        <h2>Surprise! 🎉</h2>
+        <p>I may not have a real gift, but this little website is my heart for you 💖</p>
+        <p>Keep it forever as my little love note 😘</p>
+      `;
+    }
+    step++;
+  }
+</script>
+
+</body>
+</html>
